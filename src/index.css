@@ -1,9 +1,17 @@
-
 .hole {
+  width: 150px;
+  height: 150px;
   background: url("/hole.png") no-repeat center/contain;
+  cursor: pointer;
 }
 
 .mole {
   background-image: url("/mole.png");
 }
 
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+  justify-content: center;
+}

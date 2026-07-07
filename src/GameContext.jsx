@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
+export const GameContext = createContext();
+
 function randomMole() {
   return Math.floor(Math.random() * 9);
 }
