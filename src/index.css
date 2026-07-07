@@ -15,3 +15,121 @@
   gap: 20px;
   justify-content: center;
 }
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(#87ceeb, #8bc34a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  width: 100%;
+}
+
+.app {
+  text-align: center;
+}
+
+section,
+main {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome screen */
+
+h1 {
+  font-size: 3rem;
+  color: #5d4037;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+button {
+  background-color: #8d6e63;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #6d4c41;
+  transform: scale(1.05);
+}
+
+/* Game area */
+
+.score {
+  font-size: 2rem;
+  color: #33691e;
+  margin-bottom: 15px;
+}
+
+.restart {
+  margin-bottom: 25px;
+}
+
+/* Mole holes */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hole {
+  width: 150px;
+  height: 150px;
+  background: url("/hole.png") no-repeat center/contain;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.hole:hover {
+  transform: scale(1.08);
+}
+
+.mole {
+  background: url("/mole.png") no-repeat center/contain;
+}
+
+/* Mobile sizing */
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 90px);
+    gap: 10px;
+  }
+
+  .hole {
+    width: 90px;
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

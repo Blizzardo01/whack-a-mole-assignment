@@ -8,8 +8,8 @@ export default function Game() {
 
     return (
         <main>
-            <h1>Score: {score}</h1>
-            <button onClick={restartGame}>Restart</button>
+            <h1 className="score">Score: {score}</h1>
+            <button className="restart" onClick={restartGame}>Restart</button>
 
           <div className="board">
             {holes.map((_, index) => (
